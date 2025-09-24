@@ -3,6 +3,7 @@ tmp/
 sitemaps/
 PexelsVideo.db
 PexelsPhoto.db
+OFA-Sys/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

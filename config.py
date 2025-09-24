@@ -13,7 +13,7 @@ PORT = int(os.getenv('PORT', 8085))  # 监听端口
 
 # *****扫描配置*****
 # Windows系统的路径写法例子：'D:/照片'
-ASSETS_PATH = tuple(os.getenv('ASSETS_PATH', '/home,/srv').split(','))  # 素材所在的目录，绝对路径，逗号分隔
+ASSETS_PATH = tuple(os.getenv('ASSETS_PATH', 'E:/Camera').split(','))  # 素材所在的目录，绝对路径，逗号分隔
 SKIP_PATH = tuple(os.getenv('SKIP_PATH', '/tmp').split(','))  # 跳过扫描的目录，绝对路径，逗号分隔
 IMAGE_EXTENSIONS = tuple(os.getenv('IMAGE_EXTENSIONS', '.jpg,.jpeg,.png,.gif,.heic,.webp,.bmp').split(','))  # 支持的图片拓展名，逗号分隔，请填小写
 VIDEO_EXTENSIONS = tuple(os.getenv('VIDEO_EXTENSIONS', '.mp4,.flv,.mov,.mkv,.webm,.avi').split(','))  # 支持的视频拓展名，逗号分隔，请填小写
@@ -39,7 +39,8 @@ AUTO_SAVE_INTERVAL = int(os.getenv('AUTO_SAVE_INTERVAL', 100))  # 扫描自动�
 # 英文小模型： "openai/clip-vit-base-patch16"
 # 英文大模型："openai/clip-vit-large-patch14-336"
 # 也有人反馈这个模型不错：laion/CLIP-ViT-H-14-laion2B-s32B-b79K
-MODEL_NAME = os.getenv('MODEL_NAME', "OFA-Sys/chinese-clip-vit-base-patch16")  # CLIP模型
+# MODEL_NAME = os.getenv('MODEL_NAME', "./OFA-Sys/chinese-clip-vit-base-patch16")  # CLIP模型
+MODEL_NAME = os.getenv('MODEL_NAME', "./OFA-Sys/chinese-clip-vit-large-patch14-336px")  # CLIP模型
 DEVICE = os.getenv('DEVICE', 'auto')  # 推理设备，auto/cpu/cuda/mps
 
 # *****搜索配置*****
